@@ -1,18 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './css/Header.css'
 function Header() {
   return (
     <div
-      className='w-full flex flex-wrap justify-center md:justify-between p-2 bg-img text-gray-400
+      className='w-full flex flex-wrap justify-center lg:justify-between p-2 bg-img text-gray-400
     bg-[url("/banner-bg.png")]'
     >
-      <NavLink to="/">
-        <span className="text-2xl font-normal font-Protest text-white">
+      <NavLink to="/" className='' >
+        <span className="text-2xl font-normal font-Maamli text-white  ">
           KARTIK DHAR
         </span>
       </NavLink>
 
-      <ul className="flex flex-wrap  flex-grow md:justify-end justify-evenly  ">
+      <ul className="flex flex-wrap  flex-grow lg:justify-end justify-evenly  ">
         <NavLink
           to="/about"
           className={({ isActive }) =>

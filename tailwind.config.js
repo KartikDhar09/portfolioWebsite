@@ -5,11 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    
     extend: {
       fontFamily: {
         Protest: ["Protest Guerrilla", "sans-serif"],
         Sofadi: ["Sofadi One", "sans-serif"],
         Nabla: ["Nabla ", "sans-serif"],
+         Maamli: ["Ga Maamli ", "sans-serif"],
 
       },
     },
