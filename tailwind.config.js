@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         Protest: ["Protest Guerrilla", "sans-serif"],
         Sofadi: ["Sofadi One", "sans-serif"],
+        Nabla: ["Nabla ", "sans-serif"],
 
       },
     },
