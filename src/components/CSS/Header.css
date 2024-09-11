@@ -1,0 +1,22 @@
+.animate-logo{
+   
+    /* border-right: 2px solid white; */
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border: 2px solid ; */
+    padding: 5px;
+    animation-name: blink;
+    animation-duration: 2500ms;
+    animation-timing-function:cubic-bezier(0.22, 1, 0.36, 1);
+    animation-iteration-count: infinite;
+    padding: 0;
+}
+@keyframes blink{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 140px;
+    }
+}
