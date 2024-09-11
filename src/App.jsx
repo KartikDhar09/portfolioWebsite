@@ -14,13 +14,11 @@ const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       
-      <Route path='' element={<Home/>}/>
-      <Route path='/about' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/skills' element={<Skills/>}/>
       <Route path='/projects' element={<Projects/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      <Route/>
-      <Route/>
+      
     </Route>
 
   )

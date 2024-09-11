@@ -15,7 +15,7 @@ function Header() {
 
       <ul className="flex flex-wrap  flex-grow lg:justify-end justify-evenly  ">
         <NavLink
-          to="/about"
+          to="/"
           className={({ isActive }) =>
             ` ${isActive ? "text-purple-600 underline" : "text-gray-400 no-underline"}  `
           }
