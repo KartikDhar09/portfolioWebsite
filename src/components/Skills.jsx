@@ -2,13 +2,18 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './css/custom.css'
 const settings = {
   dots: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  rows:2  
+  slidesToShow: 6,
+  slidesToScroll: 6,
+  rows:2,
+  lazyLoad: true,
+  dots:false,
+  arrows:false 
+  
 };
 
 
@@ -80,15 +85,15 @@ function Skills() {
     <div className='flex flex-col gap-y-4 justify-center items-center  h-dvh bg-[url("/banner-bg.png")] bg-cover '>
       <h1 className='text-white font-Protest text-6xl '>SKILLS</h1>
       <div className='flex justify-evenly flex-wrap items-center  w-full h-4/6 '>
-     <div className='w-full'> 
+     <div className='w-4/6   bg-no-repeat bg-center bg-contain'> 
       <Slider {...settings}>
      {skills.map((skill)=>{
        return(
          
-           <div className='  w-48 h-48 bg-slate-900 text-white rounded-xl border-2 flex flex-col justify-evenly gap-y-2 text-xl ' key={skill.id}>
+           <div className=' bg-slate-900 bg-opacity-70 text-white rounded-xl border-2 flex flex-col justify-evenly gap-y-2 text-xl ' key={skill.id}>
              <div className=' rounded-xl p-2 h-3/4  flex justify-center items-center'>
-               <img className='border-2 w-24 h-24 rounded-full object-contain bg-white '
-               src={skill.icon} alt="skill" />
+               <img className='border-2 w-24 h-24 rounded-full object-contain bg-white text-justify text-black'
+               src={skill.icon} alt={`${skill.name}`} />
              </div>
              <p className='text-center b font-Protest rounded-lg'>{skill.name}</p>
            </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './css/Header.css'
+import './css/custom.css'
 function Header() {
   return (
-    <div
-      className='w-full flex flex-wrap justify-center lg:justify-between p-2 bg-img text-gray-400
+   <div className="sticky top-0">
+     <div
+      className='w-full flex flex-wrap justify-between p-2 bg-img text-gray-400
     bg-[url("/banner-bg.png")]'
     >
       <NavLink to="/" className='' >
@@ -13,7 +14,7 @@ function Header() {
         </span>
       </NavLink>
 
-      <ul className="flex flex-wrap  flex-grow lg:justify-end justify-evenly  ">
+      <ul className="hidden lg:flex flex-wrap  flex-grow lg:justify-end justify-evenly  ">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -58,7 +59,11 @@ function Header() {
           </li>
         </NavLink>
       </ul>
+      <div  className="lg:hidden">
+        <img src="menu.svg" alt="" />
+      </div>
     </div>
+   </div>
   );
 }
 

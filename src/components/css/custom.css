@@ -1,18 +1,15 @@
 
 .animate-logo{
    
-    /* border-right: 2px solid white; */
     text-overflow: clip;
     white-space: nowrap;
     overflow: hidden;
     animation-name: blink;
     animation-duration: 2500ms;
     animation-timing-function:cubic-bezier(0.22, 1, 0.36, 1);
-    /* animation-timing-function:linear; */
     animation-iteration-count: infinite;
     padding: 0;
 }
-/* Default animation for larger screens */
 @keyframes blink {
     from {
         width: 0px;
@@ -31,4 +28,24 @@
         }
     }
 }
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #A63C67;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #7132A3;
+    border-radius: 6px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    width:18px
+  }
+
+  
 
