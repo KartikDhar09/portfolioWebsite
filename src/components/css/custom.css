@@ -30,7 +30,7 @@
 }
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 0px;
   }
   
   ::-webkit-scrollbar-track {
@@ -48,4 +48,33 @@
   }
 
   
+
+#skill::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  #skill::-webkit-scrollbar-track {
+    background: #A63C67;
+  }
+  
+  #skill::-webkit-scrollbar-thumb {
+    background: #7132A3;
+    border-radius: 6px;
+    height: 12px;
+  }
+  
+  
+  #skill::-webkit-scrollbar-thumb:hover {
+    width:18px
+  }
+
+#skill{
+    scrollbar-width: none;
+} 
+@media (min-width:800px) {
+    #skill{
+        height: 25%;
+        width: 83%;
+    }
+} 
 

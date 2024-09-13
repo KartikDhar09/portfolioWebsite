@@ -1,20 +1,6 @@
 import React from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 import './css/custom.css'
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 6,
-  slidesToScroll: 6,
-  rows:2,
-  lazyLoad: true,
-  dots:false,
-  arrows:false 
-  
-};
 
 
 const skills=[
@@ -82,29 +68,26 @@ const skills=[
 ]
 function Skills() {
   return (
-    <div className='flex flex-col gap-y-4 justify-center items-center  h-dvh bg-[url("/banner-bg.png")] bg-cover '>
-      <h1 className='text-white font-Protest text-6xl '>SKILLS</h1>
-      <div className='flex justify-evenly flex-wrap items-center  w-full h-4/6 '>
-     <div className='w-4/6   bg-no-repeat bg-center bg-contain'> 
-      <Slider {...settings}>
+    <div className='flex flex-col gap-y-4 xl:gap-y-12   xl:justify-center  p-4 justify-center items-center  h-dvh bg-[url("/banner-bg.png")] bg-cover '>
+      <h1 className='text-white font-Protest md:text-6xl text-4xl text-center w-1/2   underline'>SKILLS</h1>
+     <div className='w-4/5 lg:w-1/2 lg:h-1/2 h-1/2 rounded-xl overflow-auto  lg:overflow-visible flex flex-col lg:flex-row justify-center items-center gap-2  lg:gap-4 flex-wrap  md:h-1/2  xl:mb-20 
+     ' id="skill"> 
      {skills.map((skill)=>{
-       return(
-         
-           <div className=' bg-slate-900 bg-opacity-70 text-white rounded-xl border-2 flex flex-col justify-evenly gap-y-2 text-xl ' key={skill.id}>
-             <div className=' rounded-xl p-2 h-3/4  flex justify-center items-center'>
-               <img className='border-2 w-24 h-24 rounded-full object-contain bg-white text-justify text-black'
-               src={skill.icon} alt={`${skill.name}`} />
-             </div>
-             <p className='text-center b font-Protest rounded-lg'>{skill.name}</p>
-           </div>
-         
-       )
-     })}  
-     </Slider>
+    return(
+      
+        <div className=' bg-slate-900 bg-opacity-70 text-white rounded-xl border-2 flex flex-col aspect-square justify-evenly gap-y-3  text-xl hover:cursor-pointer'  key={skill.id}>
+          <div className=' rounded-xl p-4  lg:h-1/4   flex justify-center items-center '>
+            <img className='border-2 lg:w-24 w-12 h-12 lg:h-24 rounded-full object-contain bg-white text-justify text-black'
+            src={skill.icon} alt={`${skill.name}`} />
+          </div>
+          <p className='text-center b font-Protest rounded-lg'>{skill.name}</p>
+        </div>
+      
+    )
+  })} 
      </div>
    </div>
    
-      </div>
 
      
   )
